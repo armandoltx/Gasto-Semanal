@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
+import Listado from './Listado';
 import '../css/App.css';
 
 class App extends Component {
@@ -48,7 +49,9 @@ class App extends Component {
             <div className="one-half column">
               <Formulario agregarGasto={this.agregarGasto} />
             </div>
-            <div className="one-half column"></div>
+            <div className="one-half column">
+              <Listado />
+            </div>
           </div>
         </div>
       
