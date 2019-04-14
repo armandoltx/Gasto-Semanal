@@ -1,22 +1,22 @@
-export const validarPresupuesto = (presupuesto) => {
-  let totalPresupuesto = parseInt(presupuesto, 10) || 0;
+export const validarPresupuesto = presupuesto => {
+  let totalPresupuesto = parseInt(presupuesto, 10)|| 0;
 
-  if(totalPresupuesto > 0) {
-    return totalPresupuesto;
+  if(totalPresupuesto > 0 ) {
+      return totalPresupuesto;
   } else {
-    return false;
+      return false;
   }
 }
 
-export const revisarPresupuesto = (presupuesto, restante) => {
+export const revisarPresupuesto = (presupuesto,restante) => {
   let clase;
-  //comprobar el 25%
-  if( (presupuesto / 4 ) > restante ) {
-    clase = 'alert alert-danger';
-  } else if( (presupuesto / 2) > restante ) {
-    clase = 'alert alert-warning';
+  // Comprobar el 25% 
+  if( (presupuesto / 4) > restante) {
+        clase = 'alert alert-danger';
+  } else if( (presupuesto / 2) > restante) {
+      clase = 'alert alert-warning'
   } else {
-    clase = 'alert alert-success'
+      clase = 'alert alert alert-success';
   }
   return clase;
 }
